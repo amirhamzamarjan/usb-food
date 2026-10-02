@@ -1,0 +1,18 @@
+{
+  "name": "us-bengol-website",
+  "version": "1.0.0",
+  "description": "US BENGOL - Traditional Bangladeshi Food Brand Website & Admin System",
+  "scripts": {
+    "start": "php -S localhost:8000",
+    "dev": "php -S localhost:8000",
+    "serve": "php -S 0.0.0.0:8000"
+  },
+  "keywords": [
+    "us-bengol",
+    "bangladeshi-food",
+    "php",
+    "mysql"
+  ],
+  "author": "US BENGOL",
+  "license": "ISC"
+}

@@ -1,0 +1,216 @@
+/**
+ * US BENGOL - Responsive Styles
+ */
+
+/* Medium Devices & Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-location-cue {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: 16px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .dietary-spotlight-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 36px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .prepare-timeline {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .prepare-timeline::before {
+    top: 0;
+    left: 36px;
+    width: 2px;
+    height: 100%;
+  }
+
+  .timeline-step {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .step-number-circle {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .bulk-targets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* Small Screens & Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .hero-visual-card {
+    padding: 20px;
+  }
+
+  .hero-main-img {
+    height: 280px;
+  }
+
+  .floating-badge {
+    padding: 8px 14px;
+  }
+
+  .floating-badge.badge-top {
+    top: -10px;
+    right: -5px;
+  }
+
+  .floating-badge.badge-bottom {
+    bottom: -15px;
+    left: -5px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .product-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .modal-body {
+    padding: 28px 20px;
+  }
+
+  .form-row,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .bulk-section-card {
+    padding: 32px 20px;
+  }
+
+  .bulk-targets-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-info-card {
+    padding: 28px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Sticky Mobile Action Bar */
+  .mobile-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--color-border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 990;
+    box-shadow: 0 -4px 16px rgba(35, 20, 12, 0.08);
+  }
+
+  .mobile-sticky-bar .btn {
+    flex: 1;
+    padding: 11px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .dietary-features-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pouchWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F5EFE6"/>
+      <stop offset="100%" stop-color="#E8DFD3"/>
+    </linearGradient>
+    <filter id="maidaShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#2A1810" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" rx="32" fill="#FAF7F2"/>
+  <circle cx="300" cy="300" r="210" fill="#EFE8DB" opacity="0.6"/>
+
+  <g filter="url(#maidaShadow)">
+    <path d="M190,170 L410,170 C435,170 445,190 440,240 L425,445 C420,475 395,490 365,490 L235,490 C205,490 180,475 175,445 L160,240 C155,190 165,170 190,170 Z" fill="url(#pouchWhite)"/>
+    <path d="M180,170 C230,180 370,180 420,170 L415,195 C370,205 230,205 185,195 Z" fill="#D8CFBF"/>
+
+    <rect x="205" y="240" width="190" height="180" rx="10" fill="#FCFAF6" stroke="#233D2D" stroke-width="1.5"/>
+    <rect x="212" y="247" width="176" height="166" rx="8" fill="none" stroke="#233D2D" stroke-width="0.75" stroke-dasharray="3 3"/>
+
+    <circle cx="300" cy="285" r="16" fill="#E8F1EC"/>
+    <path d="M300,273 L300,297 M292,280 L308,290 M292,290 L308,280" stroke="#233D2D" stroke-width="2"/>
+
+    <text x="300" y="335" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="#2E4D39" text-anchor="middle">US BENGOL</text>
+    <text x="300" y="362" font-family="'Plus Jakarta Sans', serif" font-size="20" font-weight="800" fill="#2E1B10" text-anchor="middle">FINE MAIDA</text>
+    <text x="300" y="384" font-family="'Noto Sans Bengali', sans-serif" font-size="14" font-weight="700" fill="#233D2D" text-anchor="middle">সুপারফাইন ময়দা</text>
+    <text x="300" y="402" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#887360" text-anchor="middle">TRIPLE SIFTED QUALITY</text>
+  </g>
+
+  <g transform="translate(360, 110)">
+    <rect width="150" height="34" rx="17" fill="#233D2D" filter="url(#maidaShadow)"/>
+    <text x="75" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="1" text-anchor="middle">FINE REFINED</text>
+  </g>
+</svg>

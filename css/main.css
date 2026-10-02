@@ -1,0 +1,289 @@
+/**
+ * US BENGOL - Main Design System & Base Styles
+ * Brand: US BENGOL (Traditional Bangladeshi Food Products)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #F4EFE6;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #FDFCF9;
+  --color-surface-card: #FFFFFF;
+
+  --color-wheat-100: #F9F5EC;
+  --color-wheat-200: #EFE6D5;
+  --color-wheat-300: #E2D3BB;
+  --color-wheat-400: #D4C1A2;
+
+  --color-brown-900: #23140C;
+  --color-brown-800: #2E1B10;
+  --color-brown-700: #42291B;
+  --color-brown-600: #5C3D2B;
+  --color-brown-500: #78533D;
+  --color-brown-400: #966F58;
+  --color-brown-300: #B89680;
+
+  --color-green-deep: #233D2D;
+  --color-green-forest: #2E4D39;
+  --color-green-light: #EBF3ED;
+
+  --color-gold-ghee: #C89B48;
+  --color-gold-light: #F8EED8;
+  --color-gold-hover: #B28636;
+
+  --color-terracotta: #A64B35;
+  --color-terracotta-light: #F7EDE9;
+
+  --color-text-main: #24150E;
+  --color-text-body: #47362C;
+  --color-text-muted: #7A675B;
+  --color-text-light: #A39185;
+  --color-border: #E8DFD1;
+  --color-border-light: #F0E8DC;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-bn: 'Noto Sans Bengali', 'Plus Jakarta Sans', sans-serif;
+
+  /* Spacing */
+  --container-max: 1240px;
+  --header-height: 84px;
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(35, 20, 12, 0.04);
+  --shadow-md: 0 8px 24px rgba(35, 20, 12, 0.06);
+  --shadow-lg: 0 16px 40px rgba(35, 20, 12, 0.08);
+  --shadow-xl: 0 24px 60px rgba(35, 20, 12, 0.12);
+  --shadow-hover: 0 20px 45px rgba(35, 20, 12, 0.11);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  line-height: 1.65;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Warm Organic Background Texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(#D8C9B3 0.65px, transparent 0.65px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-main);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 3.8vw, 2.85rem); font-weight: 800; }
+h3 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); font-weight: 700; }
+h4 { font-size: 1.25rem; font-weight: 700; }
+h5 { font-size: 1.1rem; font-weight: 600; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-body);
+  font-size: 1.05rem;
+}
+
+p.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.text-bn {
+  font-family: var(--font-bn);
+}
+
+.text-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.text-gold { color: var(--color-gold-ghee); }
+.text-green { color: var(--color-green-deep); }
+.text-muted { color: var(--color-text-muted); }
+.text-white { color: #FFFFFF; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-sm { padding: 60px 0; }
+.section-lg { padding: 130px 0; }
+
+.section-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section-dark {
+  background-color: var(--color-brown-900);
+  color: #FDFBF7;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #FFFFFF;
+}
+
+.section-dark p {
+  color: #D4C3B7;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px auto;
+}
+
+.section-header.text-start {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--color-wheat-200);
+  border: 1px solid var(--color-wheat-300);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brown-700);
+  margin-bottom: 16px;
+}
+
+.badge-tag.green {
+  background: var(--color-green-light);
+  border-color: #CCE3D4;
+  color: var(--color-green-deep);
+}
+
+.badge-tag.gold {
+  background: var(--color-gold-light);
+  border-color: #EBD6A7;
+  color: #7E5813;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  color: var(--color-text-main);
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
